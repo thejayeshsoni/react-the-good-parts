@@ -24,6 +24,14 @@
   margin: 20px;
 }
 
+.filter{
+  padding: 10px;
+  margin: 10px;
+}
+.filter-btn{
+  cursor: pointer;
+}
+
 .res-container{
   display: flex;
   flex-wrap: wrap;

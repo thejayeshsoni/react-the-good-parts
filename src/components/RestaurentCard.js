@@ -7,14 +7,14 @@ const RestaurentCard = (props) => {
         alt="res-logo"
         src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
-          resData.info.cloudinaryImageId
+          resData?.info?.cloudinaryImageId
         }
       />
-      <h3>{resData.info.name}</h3>
-      <h4>{resData.info.cuisines.join(", ")}</h4>
-      <h4>{resData.info.areaName}</h4>
-      <h4>{resData.info.costForTwo}</h4>
-      <h4>{resData.info.avgRating}</h4>
+      <h3>{resData?.info?.name}</h3>
+      <h4>{resData?.info?.cuisines.join(", ")}</h4>
+      <h4>{resData?.info?.areaName}</h4>
+      <h4>{resData?.info?.costForTwo}</h4>
+      <h4>{resData?.info?.avgRating}</h4>
     </div>
   );
 };
