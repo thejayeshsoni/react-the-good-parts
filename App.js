@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("div", { id: "heading" }, [
-  React.createElement("h1", {}, "Hello from REACT"),
-  React.createElement("h2", {}, "Changes made by Jayesh Soni"),
-]); // core react thing
-
-const root = ReactDOM.createRoot(document.getElementById("parent"));
-
+// React.createElement() => Object => HTMLElement (render)
+const heading = React.createElement("h1", { id: "heading" }, "Hello from React..!");
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
