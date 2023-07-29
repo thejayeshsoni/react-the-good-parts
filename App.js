@@ -21,6 +21,7 @@ console.log(jsxHeading);
 const HeadingComponent1 = () => {
   return (
     <div>
+      {HeadingComponent2()}
       <HeadingComponent2 />
       <h1>Heading Functional Component 1</h1>
     </div>
