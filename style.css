@@ -1,5 +1,46 @@
-#heading {
-  text-align: center;
-  font-weight: bolder;
-  color: blue;
+.header{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo{
+  width: 90px;
+}
+
+.nav-items>ul{
+  font-size: larger;
+  display: flex;
+}
+
+.nav-items>ul>li{
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.search{
+  padding: 20px;
+  margin: 20px;
+}
+
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.res-card{
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  background-color: #f0f0f0;
+}
+
+.res-logo{
+  width: 100%;
+}
+
+.res-card:hover{
+  cursor: pointer;
+  border: 1px solid black;
 }
