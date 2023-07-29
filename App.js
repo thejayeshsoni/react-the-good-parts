@@ -2,11 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // React.createElement() => Object => HTMLElement (render)
-const heading = React.createElement("h1", { id: "heading" }, "Hello from React..!");
-console.log(heading)
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Hello from React..!"
+);
+console.log(heading);
 
+//JSX => Babel transpiles it to React.createElement() => JS Object => HTMLElement (render)
 const jsxHeading = <h1 id="heading">Hello from JSX</h1>;
-console.log(jsxHeading)
+console.log(jsxHeading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(jsxHeading);
