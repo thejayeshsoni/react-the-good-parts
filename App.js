@@ -24,4 +24,6 @@ const HeadingComponent1 = () => {
 const HeadingComponent2 = () => <h1>Heading Functional Component</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+
+// to render a component don't use => root.render(HeadingComponent1); instead use --:
+root.render(<HeadingComponent1 />);
