@@ -19,11 +19,14 @@ console.log(jsxHeading);
  *  - Functional components
  */
 const HeadingComponent1 = () => {
-  return <h1>Heading Functional Component</h1>;
+  return (
+    <div>
+      <HeadingComponent2 />
+      <h1>Heading Functional Component 1</h1>
+    </div>
+  );
 };
-const HeadingComponent2 = () => <h1>Heading Functional Component</h1>;
+const HeadingComponent2 = () => <h1>Heading Functional Component 2</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// to render a component don't use => root.render(HeadingComponent1); instead use --:
 root.render(<HeadingComponent1 />);
