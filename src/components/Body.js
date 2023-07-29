@@ -1,47 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
 import resList from "../utils/mockData";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
-  // Normal Variable
-  // let listOfRestaurents = [
-  //   {
-  //     info: {
-  //       id: "45607",
-  //       name: "Domino's Pizza",
-  //       cloudinaryImageId: "gzobptvged4mzsk4vnfx",
-  //       areaName: "Sodala",
-  //       costForTwo: "₹400 for two",
-  //       cuisines: ["Pizzas", "Italian", "Pastas", "Desserts"],
-  //       avgRating: 4.9,
-  //     },
-  //   },
-  //   {
-  //     info: {
-  //       id: "45608",
-  //       name: "Romino's Pizza",
-  //       cloudinaryImageId: "gzobptvged4mzsk4vnfx",
-  //       areaName: "Sodala",
-  //       costForTwo: "₹400 for two",
-  //       cuisines: ["Pizzas", "Italian", "Pastas", "Desserts"],
-  //       avgRating: 3.9,
-  //     },
-  //   },
-  //   {
-  //     info: {
-  //       id: "45609",
-  //       name: "KFC",
-  //       cloudinaryImageId: "gzobptvged4mzsk4vnfx",
-  //       areaName: "Sodala",
-  //       costForTwo: "₹400 for two",
-  //       cuisines: ["Pizzas", "Italian", "Pastas", "Desserts"],
-  //       avgRating: 4.1,
-  //     },
-  //   },
-  // ];
-
-  //Local State Variable
   const [listOfRes, setListOfRes] = useState(resList);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9124336&lng=75.7872709&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const res = await data.json();
+    console.log(res);
+    setListOfRes(
+      res?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
 
   return (
     <div className="body">
@@ -50,9 +28,6 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             setListOfRes(listOfRes.filter((res) => res.info.avgRating > 4));
-            // listOfRestaurents = listOfRestaurents.filter(
-            //   (res) => res.info.avgRating > 4
-            // );
           }}
         >
           Top Rated Restaurents
