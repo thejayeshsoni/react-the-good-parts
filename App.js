@@ -13,5 +13,15 @@ console.log(heading);
 const jsxHeading = <h1 id="heading">Hello from JSX</h1>;
 console.log(jsxHeading);
 
+/**
+ * React components
+ *  - Class based components
+ *  - Functional components
+ */
+const HeadingComponent1 = () => {
+  return <h1>Heading Functional Component</h1>;
+};
+const HeadingComponent2 = () => <h1>Heading Functional Component</h1>;
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(jsxHeading);
