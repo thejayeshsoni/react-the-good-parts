@@ -4,8 +4,8 @@ import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  const [listOfRes, setListOfRes] = useState(resList);
-  const [filteredRes, setFilteredRes] = useState(resList);
+  const [listOfRes, setListOfRes] = useState([]);
+  const [filteredRes, setFilteredRes] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -26,7 +26,9 @@ const Body = () => {
     );
   };
 
-  return (
+  return listOfRes.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <div className="search">
@@ -54,7 +56,7 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            setListOfRes(listOfRes.filter((res) => res.info.avgRating > 4));
+            setFilteredRes(listOfRes.filter((res) => res.info.avgRating > 4));
           }}
         >
           Top Rated Restaurents
