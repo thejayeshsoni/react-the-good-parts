@@ -71,3 +71,13 @@
   background-color: #f0f0f0;
   margin: 20px;
 }
+
+.user-card{
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.github-image{
+  width: 10%;
+  padding-top: 10px;
+}
