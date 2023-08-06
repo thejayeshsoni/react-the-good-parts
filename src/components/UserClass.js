@@ -42,7 +42,7 @@ class UserClass extends React.Component {
 
     console.log("Render is called..!!");
     return (
-      <div className="user-card">
+      <div className="m-4 p-4 bg-slate-300 rounded-lg w-80">
         <h2>Count : {count}</h2>
         <div className="count-btn">
           <button
@@ -64,8 +64,8 @@ class UserClass extends React.Component {
             Reset
           </button>
         </div>
-        <img src={avatar_url} className="github-image" />
-        <h2>username : {login}</h2>
+        <img className="rounded-lg" src={avatar_url} />
+        <h2 className="font-bold">username : {login}</h2>
         <h2>Name : {name}</h2>
         <h2>Location : {location}</h2>
       </div>

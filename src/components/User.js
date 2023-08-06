@@ -3,7 +3,7 @@ import { useState } from "react";
 const User = ({ name }) => {
   const [count] = useState(0);
   return (
-    <div className="user-card">
+    <div className="m-4 p-4 bg-slate-300 rounded-lg">
       <h2>Count : {count}</h2>
       <h2>{name}</h2>
       <h2>Location : Jaipur</h2>
