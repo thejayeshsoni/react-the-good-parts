@@ -31,9 +31,15 @@ const AppLayout = () => {
   }, []);
 
   return (
+    // Default value will be there if we don't provided any context
+
     <UserContext.Provider value={{ loggedInUser: userName }}>
+      {/* wrapping our application with UserContext and value will take the values that we've passed in. */}
       <div className="app">
-        <Header />
+        <UserContext.Provider value={{ loggedInUser: "Jay Soni" }}>
+          {/* But the Header component will only have the user context with passed values into it.  */}
+          <Header />
+        </UserContext.Provider>
         <Outlet />
       </div>
     </UserContext.Provider>
