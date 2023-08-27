@@ -7,6 +7,9 @@ import RestaurentCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
   const { restaurantId } = useParams();
 
+  // prop drilling eg.
+  const dummy = "Dummy Data";
+
   const resInfo = useRestaurantMenu(restaurantId);
 
   const [showIndex, setShowIndex] = useState();
@@ -67,6 +70,7 @@ const RestaurantMenu = () => {
           data={category?.card?.card}
           showItems={index === showIndex ? true : false}
           setShowIndex={() => setShowIndex(index)}
+          dummy={dummy}
         />
       ))}
     </div>
