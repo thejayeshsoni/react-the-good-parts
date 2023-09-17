@@ -10,6 +10,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
 import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 // import Grocery from "./components/Grocery";
 
 // chunking
@@ -32,7 +33,7 @@ const AppLayout = () => {
 
   return (
     <Provider store={appStore}>
-      // Default value will be there if we don't provided any context
+      {/* Default value will be there if we don't provided any context */}
       <UserContext.Provider value={{ loggedInUser: userName }}>
         {/* wrapping our application with UserContext and value will take the values that we've passed in. */}
         <div className="app">
@@ -75,6 +76,10 @@ const appRouter = createBrowserRouter([
             <Grocery />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
