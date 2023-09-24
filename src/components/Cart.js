@@ -3,7 +3,14 @@ import ItemList from "./ItemList";
 import { clearCart } from "../utils/cartSlice";
 
 const Cart = () => {
+  // always subscribe to the small portion/ specific portion of the store.
   const cartItems = useSelector((store) => store?.cart?.items);
+
+  /**
+   * Never do like - because there is no sense in subscribing, the whole store in one go.
+   *  const store = useSelector((store)=>store);
+   *  const cartItems = store.cart.items;
+   */
 
   const dispatch = useDispatch();
   const handleClearCart = () => {
@@ -21,7 +28,7 @@ const Cart = () => {
       </button>
       {cartItems.length === 0 && (
         <h1 className="text-2xl">
-          Your cart is Empty. Please some Items to cart.
+          Your cart is Empty. Please add some Items to cart.
         </h1>
       )}
       <div className="w-6/12 m-auto">
