@@ -1,5 +1,5 @@
-![02restro](https://github.com/thejayeshsoni/namaste-react/assets/67512410/49abe82e-98e8-489a-849c-d9704f21072c)
 # React Learning
+![02restro](https://github.com/thejayeshsoni/react-the-good-parts/assets/67512410/7b9b4c57-fed3-4bc1-b2ac-862a3397ae65)
 
 # Parcel
 - Dev Build
@@ -19,8 +19,12 @@
 - Tree Shaking [to remove unused code]
 - Different dev and prod bundles
 
-![01shimmer](https://github.com/thejayeshsoni/namaste-react/assets/67512410/fac1140f-902c-4465-9b68-29228b33df0f)
-![03filtered restros](https://github.com/thejayeshsoni/namaste-react/assets/67512410/3898c33e-cb03-4477-b33d-10b5a3dc60f1)
-![with-label](https://github.com/thejayeshsoni/namaste-react/assets/67512410/d3d9c01d-dc0c-4c1d-817d-289105b3442d)
-![accordion](https://github.com/thejayeshsoni/namaste-react/assets/67512410/8489ab14-bfe4-4dd1-9937-48df3baeae8c)
-![accordion-1](https://github.com/thejayeshsoni/namaste-react/assets/67512410/46e1c6a7-9487-4b93-94f9-d2205c8de9a5)
+## Shimmer UI Effect
+![01shimmer](https://github.com/thejayeshsoni/react-the-good-parts/assets/67512410/eff94f47-8682-4e44-bad3-1565949048ec)
+## Filteration of Restaurants
+![03filtered restros](https://github.com/thejayeshsoni/react-the-good-parts/assets/67512410/4ae9edec-6f6f-4995-b667-c4587f7bce85)
+## Labeling
+![with-label](https://github.com/thejayeshsoni/react-the-good-parts/assets/67512410/aa004b0a-49c4-454e-bfad-e6805722bd9f)
+## Accordion
+![accordion](https://github.com/thejayeshsoni/react-the-good-parts/assets/67512410/2e7a7972-ad6c-417d-805a-ea441be75fe1)
+![accordion-1](https://github.com/thejayeshsoni/react-the-good-parts/assets/67512410/79d8c006-da6f-4f41-aeea-3533882a9517)
